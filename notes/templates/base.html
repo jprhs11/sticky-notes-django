@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes App</title>
+    <!-- Bootstrap CSS for easy styling -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        .sticky-note {
+            background-color: #fff382;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 7px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            min-height: 200px;
+        }
+    </style>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'note_list' %}">My Sticky Notes</a>
+            <a class="btn btn-light" href="{% url 'note_create' %}">+ New Note</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        <!-- Child content goes here -->
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* Custom Sticky Note Styling */
+.sticky-note {
+    background: #ffeb3b;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.sticky-note:hover {
+    transform: scale(1.03) rotate(-1deg);
+    z-index: 10;
+}
+
+.note-content {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.1rem;
+}

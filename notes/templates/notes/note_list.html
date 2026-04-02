@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    {% for note in notes %}
+    <div class="col-md-4">
+        <div class="sticky-note">
+            <h3>{{ note.title }}</h3>
+            <p>{{ note.content|linebreaks }}</p>
+            <small class="text-muted">Created: {{ note.created_at|date:"M d, Y" }}</small>
+            <div class="mt-3">
+                <a href="{% url 'note_update' note.pk %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                <a href="{% url 'note_delete' note.pk %}" class="btn btn-sm btn-outline-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12 text-center">
+        <p>No notes found. Start by creating one!</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
