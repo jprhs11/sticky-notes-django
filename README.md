@@ -24,5 +24,5 @@ A simple, responsive sticky notes application built with Django. This project al
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com
+   git clone [https://github.com](https://github.com/jprhs11/sticky-notes-django.git)
    cd sticky-notes-django
