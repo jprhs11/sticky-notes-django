@@ -1,0 +1,15 @@
+[flake8]
+# Set max line length to 79 (Strict PEP 8)
+max-line-length = 79
+
+# Files and directories to ignore
+exclude = 
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    migrations,
+    manage.py
+
+# Common style warnings to ignore
+ignore = E501, W503
